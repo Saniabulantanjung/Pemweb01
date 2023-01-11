@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAKTIKUM11</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .container {
+            display: flex;
+            margin: 50px 350px;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function dekor1() {
+            dekor_1 = document.getElementById("home");
+            dekor_1.style.color = "aqua";
+        }
+
+        function dekor2() {
+            dekor_2 = document.getElementById("home");
+            dekor_2.style.color = "black";
+        }
+
+        function imagepicker() {
+            const list_image = ["Semangka.jpg", "Avocado.jpg", "Mangga.jpg", "Anggur.jpg", "Nanas.jpg", "Naga.jpg"]
+            let pilihan = document.getElementById("option");
+            if(pilihan.value == "Semangka") {
+                let select = list_image[0];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Semangka.jpg")
+            }
+
+            if(pilihan.value == "Avocado") {
+                let select = list_image[1];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Avocado.jpg")
+            }
+
+            if(pilihan.value == "Mangga") {
+                let select = list_image[2];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Mangga.jpg")
+            }
+
+            if(pilihan.value == "Anggur") {
+                let select = list_image[3];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Anggur.jpg")
+            }
+
+            if(pilihan.value == "Nanas") {
+                let select = list_image[4];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Nanas.jpg")
+            }
+
+            if(pilihan.value == "Naga") {
+                let select = list_image[5];
+                document.getElementById("image").src = `image/${select}`
+                alert("Ini gambar Naga.jpg")
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <a href="" onmouseover="dekor1()" onmouseout="dekor2()" id="home"><h1>Welcome to sania Image Picker</h1></a>
+    <hr>
+    <br>
+    <select id="option" onchange="imagepicker()">
+        <option value="" selected>Pilih Gambar</option>
+        <option value="Semangka">Semangka</option>
+        <option value="Avocado">Avocado</option>
+        <option value="Mangga">Mangga</option>
+        <option value="Anggur">Anggur</option>
+        <option value="Nanas">Nanas</option>
+        <option value="Naga">Naga</option>
+    </select>
+    <br>
+    <div class="container" id="container">
+        <div class="box" id="box">
+            <img id="image">
+        </div>
+    </div>SSSS
+
+
+</body>
+</html>
